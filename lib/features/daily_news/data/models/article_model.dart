@@ -1,10 +1,8 @@
-
-
 import 'package:clean_architecture/features/daily_news/domain/entities/article.dart';
 
 class ArticleModel extends ArticleEntity {
   const ArticleModel({
-   int ? id,
+    int? id,
     String? author,
     String? tittle,
     String? description,
@@ -12,18 +10,18 @@ class ArticleModel extends ArticleEntity {
     String? urlToImage,
     String? publishedAt,
     String? content,
+  });
 
-});
-
-  factory ArticleModel.fromJson(Map<String , dynamic> map){
+  factory ArticleModel.fromJson(Map<String, dynamic> map) {
     return ArticleModel(
-      author: map['author']?? "",
-      tittle: map['title']??  "",
-    description: map['description']?? "",
-    url: map['url']?? "",
-      urlToImage: map['urlToImage']?? "",
-      publishedAt: map['publishedAt']?? "",
-      content: map['content']?? "",
+      id: map['id'] ?? "",
+      author: map['author'] ?? "",
+      tittle: map['title'] ?? "",
+      description: map['description'] ?? "",
+      url: map['url'] ?? "",
+      urlToImage: map['urlToImage'] ?? "",
+      publishedAt: map['publishedAt'] ?? "",
+      content: map['content'] ?? "",
     );
   }
 }
