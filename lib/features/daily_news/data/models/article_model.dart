@@ -2,9 +2,8 @@ import 'package:clean_architecture/features/daily_news/domain/entities/article.d
 
 class ArticleModel extends ArticleEntity {
   const ArticleModel({
-    int? id,
     String? author,
-    String? tittle,
+    String? title,
     String? description,
     String? url,
     String? urlToImage,
@@ -14,9 +13,8 @@ class ArticleModel extends ArticleEntity {
 
   factory ArticleModel.fromJson(Map<String, dynamic> map) {
     return ArticleModel(
-      id: map['id'] ?? "",
       author: map['author'] ?? "",
-      tittle: map['title'] ?? "",
+      title: map['title'] ?? "",
       description: map['description'] ?? "",
       url: map['url'] ?? "",
       urlToImage: map['urlToImage'] ?? "",
